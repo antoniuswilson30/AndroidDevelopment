@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/creammuda">
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/creammuda"
+        android:src="@drawable/ic_close_fill0_wght400_grad0_opsz24"></ImageButton>
+
+    <TextView
+        android:id="@+id/titlePage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ralewaybold"
+        android:text="Tambah Slot Kosong"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlePage"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/chooseDay">
+
+        <AutoCompleteTextView
+            android:id="@+id/dropdownSearch"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/hari"
+            android:inputType="none"
+            android:text="Pilih Hari"
+            android:textColor="@color/hitam"
+            android:fontFamily="@font/ralewayregular"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/isiWaktuMulai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chooseDay"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_waktu_mulai"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:enabled="false"
+            android:hint="@string/pilih_waktu_mulai">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_isiWaktuMulai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ralewayregular" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/btn_clock_mulai"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/jam"
+            android:src="@drawable/ic_schedule_white_24dp"></ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/isiWaktuAkhir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/isiWaktuMulai"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_waktu_akhir"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:enabled="false"
+            android:hint="@string/pilih_waktu_akhir">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_isiWaktuAkhir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ralewayregular" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/btn_clock_akhir"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/jam"
+            android:src="@drawable/ic_schedule_white_24dp"></ImageButton>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/birutua"
+        android:fontFamily="@font/ralewaysemibold"
+        android:text="@string/simpan"></Button>
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/creammuda"
+    >
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="210dp"-->
+    <!--        android:layout_height="210dp"-->
+
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:background="@drawable/ic_untitled_design"></LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerInParent="true"-->
+
+    <!--        android:orientation="vertical">-->
+
+    <!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:text="HelloDoc"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:textSize="32dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:textColor="@color/blue"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:fontFamily="sans-serif-medium"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    android:textAlignment="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    >&ndash;&gt;-->
+    <!--&lt;!&ndash;                </TextView>&ndash;&gt;-->
+
+    <!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="50px"
+            android:layout_gravity="center"
+            android:src="@drawable/logoinformatika1">
+
+        </ImageView>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/creammuda">
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/creammuda"
+        android:src="@drawable/ic_close_fill0_wght400_grad0_opsz24"></ImageButton>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:id="@+id/titleTambahPertemuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ralewaybold"
+            android:text="@string/tambah_pertemuan"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"></TextView>
+
+        <ImageView
+            android:id="@+id/circle1Wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/titleTambahPertemuan"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/state1"></ImageView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_JudulPertemuan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/circle1Wrapper"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:hint="@string/judul">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ralewayregular" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/pilihTanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_JudulPertemuan"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_tanggalMulai"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:enabled="false"
+                android:hint="@string/pilih_tanggal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_isiTanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ralewayregular" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btn_calendarMulai"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/jam"
+                android:src="@drawable/ic_calendar_today_white_24dp">
+                >
+            </ImageButton>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/pilihTanggalAkhir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pilihTanggal"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_tanggalAkhir"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:enabled="false"
+                android:hint="@string/pilih_tanggalSelesai">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_isiTanggalAkhir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ralewayregular" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btn_calendarAkhir"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/jam"
+                android:src="@drawable/ic_calendar_today_white_24dp">
+                >
+            </ImageButton>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/isiWaktuMulai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pilihTanggalAkhir"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_waktu_mulai"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:enabled="false"
+                android:hint="@string/pilih_waktu_mulai">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_isiWaktuMulai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ralewayregular" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btn_clock_mulai"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/jam"
+                android:src="@drawable/ic_schedule_white_24dp"></ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/isiWaktuAkhir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isiWaktuMulai"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_waktu_akhir"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:enabled="false"
+                android:hint="@string/pilih_waktu_akhir">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_isiWaktuAkhir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ralewayregular" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btn_clock_akhir"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/jam"
+                android:src="@drawable/ic_schedule_white_24dp"></ImageButton>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/deskripsiPertemuan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isiWaktuAkhir"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:hint="@string/deskripsi">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ralewayregular"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_berikutnya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/birutua"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="@string/berikutnya"></Button>
+    </RelativeLayout>
+</RelativeLayout>

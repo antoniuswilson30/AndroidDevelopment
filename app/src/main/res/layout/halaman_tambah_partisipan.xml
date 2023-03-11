@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/creammuda">
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/creammuda"
+        android:src="@drawable/ic_close_fill0_wght400_grad0_opsz24"></ImageButton>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleTambahPertemuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ralewaybold"
+            android:text="@string/tambah_pertemuan"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/black"></TextView>
+
+        <ImageView
+            android:id="@+id/circle2Wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/titleTambahPertemuan"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/state2"></ImageView>
+
+
+        <Button
+            android:id="@+id/btn_jadwal_dosen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/circle2Wrapper"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/birutua"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="@string/lihat_jadwal_dosen"></Button>
+
+        <LinearLayout
+            android:id="@+id/tambah_partisipan_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_jadwal_dosen"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputPartisipan"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="20"
+                android:hint="@string/tambah_partisipan">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ralewayregular" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/birutua"
+                android:src="@drawable/ic_baseline_add_24"></ImageButton>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/chip_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tambah_partisipan_container"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/tambah_partisipan_chip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp" />
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/birutua"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="@string/simpan"></Button>
+    </RelativeLayout>
+</RelativeLayout>
